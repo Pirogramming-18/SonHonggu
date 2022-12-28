@@ -481,11 +481,49 @@ main {
     list-style: none;
     margin: 0;
     padding: 0;
+    height: 45px;
+    white-space: nowrap;
+    width: 600px;
+    overflow: hidden;
+}
+
+#subject-list li.highlight {
+    border-bottom: 3px solid #00c73c;
+    color: #00b336;
+    font-weight: 700;
+    height: 45px;
 }
 
 #subject-list li {
     float: left;
+    margin-left: 10px;
+    padding: 14px 7px 0;
+    position: relative;
+
 }
+
+.opacity {
+    opacity: 0.5;
+    background: white;
+}
+
+.opacity.left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 45px;
+    width: 15px;
+}
+
+.opacity.right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 45px;
+    width: 15px;
+}
+
+
 
 
 #subject-all, #subject-prev, #subject-next {
