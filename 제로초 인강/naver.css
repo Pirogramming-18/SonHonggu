@@ -1,3 +1,8 @@
+/* 모든 태그를 의미하는게 * */
+* {
+    box-sizing: border-box;
+}
+
 /* 선택자(selector) */
 /* Cascading Style Sheet - 조상에 적용된 속성은 그대로 자손에게 전달된다(Cascading - 덮어쓰기) */
 /* id는 # class는 . */
@@ -29,8 +34,8 @@
     background-position: 0 -158px;
     background-repeat: no-repeat;
     /* background로 imgae, position, repeat 한 번에 조절 가능 */
-    vertical-align: top;
     content: '';
+    vertical-align: middle;
 }
 
 #header-search a {
@@ -43,13 +48,17 @@
 #header-search fieldset {
     margin-left: 20px;
     padding: 12px 0 12px 10px;
-    position: relative;
     width: 582px;
     height: 52px;
-    border: 2px solid #19ce60;
+    border: 2px solid #19ce60; /* hex표기법 */
     border-radius: 2px;
     display: inline-block;
+    vertical-align: middle;
 }
 
-/* #header-center h1 { <- 자손 선택자
-} */
+#header-search fieldset input {
+    border: none;
+    padding: 0;
+    outline: none;
+    height: 
+}
