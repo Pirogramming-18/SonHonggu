@@ -200,11 +200,30 @@ nav {
     position: absolute;
     top: -15px;
     right: 10px;
+    z-index: 100;
 }
 
 #search-ranking:hover #update-search {
     display: inline-block;
 }
+
+#z-ex {
+    position: absolute;
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+}
+
+#z-inner {
+    position: absolute;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
+}
+/* z-index비교 : 부모먼저(자식은 먼저 무시하고) 부모가 작으면 자식이 더 커도 상관 없음(눌림)
+#부모가 더 중요하다(자식끼리만 비교) */
 
 #rank-number {
     margin-top: -9px;
