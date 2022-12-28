@@ -215,3 +215,9 @@ nav {
     background-repeat: no-repeat;
     vertical-align: middle;
 }
+
+main {
+    background-color: #f2f4f7;
+    display: inline-block;
+    width: 100%;
+}
