@@ -37,11 +37,6 @@ html, body {
     border-radius: 50px;
 }
 
-.center-align {
-    margin : 0 auto;
-    width: 1080px;
-}
-
 #header-search h1 {
     display: inline-block;
     background-image: url(./네이버\ 이미지\ 스프라이트.png);
@@ -220,4 +215,85 @@ main {
     background-color: #f2f4f7;
     display: inline-block;
     width: 100%;
+}
+
+#main-centered {
+    padding: 8px 10px 0;
+    width: 1100px;
+}
+
+.center-align {
+    margin : 0 auto; 
+    width: 1080px; 
+}
+
+#main-ad {
+    display: inline-block;
+    width: 740px;
+    height: 120px;
+    background-color: #555;
+}
+
+#main-login {
+    display: inline-block;
+    width: 332px;
+    height: 120px;
+    background: white;
+}
+
+#main-ytn {
+    display: inline-block;
+    width: 740px;
+    height: 46px;
+    background: white;
+}
+
+#main-newstand {
+    display: inline-block;
+    width: 740px;
+    height: 246px;
+    background: white;
+}
+
+#main-weather {
+    display: inline-block;
+    width: 332px;
+    height: 142px;
+    vertical-align: top;
+}
+
+#main-second-ad {
+    display: inline-block;
+    width: 332px;
+    height: 150px;
+    background: #555;
+}
+
+#main-category {
+    display: inline-block;
+    width: 740px;
+    height: 837px;
+    background: white;
+}
+
+#main-shopping {
+    display: inline-block;
+    width: 332px;
+    height: 837px;
+    background: white;
+}
+
+#main-event {
+    display: inline-block;
+    width: 740px;
+    height: 130px;
+    vertical-align: top;
+    background: white;
+}
+
+#main-third-ad {
+    display: inline-block;
+    width: 332px;
+    height: 130px;
+    background: #555;
 }
