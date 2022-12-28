@@ -1,11 +1,31 @@
 /* 선택자(selector) */
 /* Cascading Style Sheet - 조상에 적용된 속성은 그대로 자손에게 전달된다(Cascading - 덮어쓰기) */
 /* id는 # class는 . */
+/* inline vs block vs inline-block
+    inline은 텍스트만큼만 공간 차지(span태그)
+    block은 100퍼센트 차지 (크롬의 기본값)
+    inline-block 높이, 너비를 설정해줄 수 있음 */
 
 #header-center {
     margin : 0 auto;
     width: 1080px;
 }
 
+/* 자식태그 */
 
+#header-search > h1 {
+    width: 280px;
+    display: inline-block;
+}
 
+#header-search h2 {
+    display: none;
+}
+
+#header-search fieldset {
+    width: 520px;
+    display: inline-block;
+}
+
+/* #header-center h1 { <- 자손 선택자
+} */
