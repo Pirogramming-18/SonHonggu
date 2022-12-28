@@ -291,6 +291,44 @@ main {
     float: left;
 }
 
+#main-login .login-wrapper {
+    padding: 15px 25px;
+}
+
+#main-login .login-text {
+    color: #888;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+#main-login .sign-up {
+    color: #888;
+    font-size: 12px;
+    line-height: 14px;
+    float: right;
+    text-decoration: none;
+}
+
+#main-login .sign-up:hover {
+    text-decoration: underline;
+}
+
+#main-login .login-login {
+    display: block;
+    padding: 15px 0;
+    margin-top: 10px;
+    background-color: #19ce60;
+    border: 1px solid #15c654;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
 .inline-block {
     display: inline-block;
 }

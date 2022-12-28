@@ -5,7 +5,7 @@
     4-1강, 4-2강, 4-3강, 4-4강, 4-5강
     5-1강, 5-2강, 5-3강, 5-4강
     6-1강, 6-2강, 6-3강, 6-4강
-    7-1강, 7-2강, 7-3강, 7-4강
+    7-1강, 7-2강, 7-3강, 7-4강, 7-5강
   -->
 <!-- MDN web docs - 컨테이닝 블록의 모든 것 -->
 
@@ -43,16 +43,18 @@
                         </h1>
                     </a>
                     <h2 class="blind">검색창</h2>
-                    <fieldset>
-                        <legend class="blind">검색</legend>
-                        <input />
-                        <span class="search-keyboard"></span>
-                        <span class="search-history"></span>
-                        <button>
-                            <span class="blind">검색</span>
-                            <span id="search-image"></span>
-                        </button>
-                    </fieldset>
+                    <form action="https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=" style="display: inline-block;">
+                        <fieldset>
+                            <legend class="blind">검색</legend>
+                            <input />
+                            <span class="search-keyboard"></span>
+                            <span class="search-history"></span>
+                            <button>
+                                <span class="blind">검색</span>
+                                <span id="search-image"></span>
+                            </button>
+                        </fieldset>
+                    </form>
                 </div>
             </div>
         </header>
@@ -104,9 +106,6 @@
                             <span class="rank-title">손홍구</span>
                         </li>
                     </ul>
-                    <div id="z-ex">
-                        <div id="z-inner"></div>
-                    </div>
                 </div>
             </div>
             <div class="center-align">
@@ -141,7 +140,16 @@
                 <div style="display: inline-block;width: 100%; vertical-align: top;">
                     <div id="main-ad"></div>
                     <div id="main-login">
-                        <h3>로그인</h3>
+                        <h3 class="blind">로그인</h3>
+                        <div class="login-wrapper">
+                            <span class="login-text">네이버를 더 안전하고 편리하게 이용하세요.</span>
+                            <a class="login-login" href="https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com">
+                                NAVER 로그인
+                            </a>
+                            <a class="sign-up" href="https://nid.naver.com/user2/V2Join?m=agree&lang=ko_KR&cpno=">
+                                회원가입
+                            </a>
+                        </div>
                     </div>
                     
                 </div>
