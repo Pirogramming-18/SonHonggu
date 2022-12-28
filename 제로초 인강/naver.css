@@ -14,6 +14,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    font-family: Dotum, '돋움', Helvetica, "Apple SD Gothic Neo", sans-serif;
 }
 
 .blind {
@@ -72,8 +73,8 @@ html, body {
     border-radius: 2px;
     display: inline-block;
     vertical-align: middle;
-    position: absolute;
-    top: 40px;
+    position: relative;
+    top: -2px;
 }
 
 #header-search fieldset input {
@@ -120,7 +121,7 @@ nav ul {
 
 nav li {
     display: inline-block;
-    padding-left: 14px;
+    padding-left: 12px;
 }
 
 a {
@@ -154,4 +155,39 @@ a {
     font-size: 11px;
     color: #404040;
     line-height: 24px;
+}
+
+header {
+    height: 170px;
+    padding: 19px;
+}
+
+nav {
+    height: 46px;
+    border-top: 1px solid #f1f3f6;
+    border-bottom: 1px solid #d1d8e4;
+    padding-bottom: 54px;
+}
+
+.verticl-bar {
+    display: inline-block;
+    margin: 18px 16px 0;
+    width: 10px;
+    height: 14px;
+    background-color: #ebeef3;
+}
+
+#search-ranking {
+    position: relative;
+    top: 17px;
+    right: -1009px;
+    display: inline-block;
+}
+
+#rank-number {
+    margin-top: -9px;
+    margin-right: 4px;
+    color: #00ab33;
+    font-size: 16px;
+    font-weight: bold;
 }
