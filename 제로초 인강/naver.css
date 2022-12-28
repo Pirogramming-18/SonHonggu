@@ -184,7 +184,25 @@ nav {
 #search-ranking {
     position: relative;
     top: 17px;
-    right: -1009px;
+    right: -933px;
+    display: inline-block;
+    width: 150px;
+    height: 20px;
+}
+
+#update-search {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid black;
+    background-color: white;
+    position: absolute;
+    top: -15px;
+    right: 10px;
+}
+
+#search-ranking:hover #update-search {
     display: inline-block;
 }
 
