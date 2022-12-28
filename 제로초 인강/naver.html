@@ -2,7 +2,7 @@
     1-2강, 1-3강, 1-4강, 1-5강, 1-6강
     2-1강, 2-2강, 2-3강
     3-1강, 3-2강, 3-3강, 3-4강
-    4-1강, 4-2강, 4-3강
+    4-1강, 4-2강, 4-3강, 4-4강
   -->
 <!-- MDN web docs - 컨테이닝 블록의 모든 것 -->
 
@@ -20,7 +20,7 @@
     <body>
         <header>
             <div id="fixed">고정</div> <!-- fixed는 스크롤로 움직여도 같이다님, fixed의 containing block은 body임-->
-            <div id="header-center"> <!-- 가운데 정렬용 div-->
+            <div class="center-align"> <!-- 가운데 정렬용 div-->
                 <!-- css문법 - 속성명 : 속성값 -->
                 <!-- css를 html파일 안에 : inline style <- 권장 x -->
                 <!-- heading tag : h1~h6, 중요도에 따라 잘 구성해야함
@@ -50,15 +50,17 @@
             </div>
         </header>
         <nav>
-            <ul>
-                <li>메일</li>
-                <li>카페</li>
-                <li>블로그</li>
-                <li>지식인</li>
-                <li>쇼핑</li>
-                <li>네이버페이</li>
-                <li>네이버쇼핑</li>
-            </ul>
+            <div class="center-align">
+                <ul>
+                    <li><a href="https://mail.naver.com/"><span id="mail"></span><span>메일</span></a></li>
+                    <li><a href=""><span></span><span>카페</span></a></li>
+                    <li><a href=""><span></span><span>블로그</span></a></li>
+                    <li><a href=""><span></span><span>지식인</span></a></li>
+                    <li><a href=""><span></span><span>쇼핑</span></a></li>
+                    <li><a href=""><span></span><span>네이버페이</span></a></li>
+                    <li><a href=""><span></span><span>네이버쇼핑</span></a></li>
+                </ul>
+            </div>
         </nav>  
         <main>
             <h2>실시간 검색어</h2>

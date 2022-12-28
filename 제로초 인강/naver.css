@@ -36,7 +36,7 @@ html, body {
     border-radius: 50px;
 }
 
-#header-center {
+.center-align {
     margin : 0 auto;
     width: 1080px;
 }
@@ -110,3 +110,29 @@ html, body {
 /* position absolute는 본인의 조상을 계속 타고 올라가다가 static이 아닌 block을 기준으로 움직인다
 그래서 기본 디폴트가 static이라서 html까지 올라가버릴 수도 있다
 이걸 방지하기 위해 fieldset을 relative로 바꿔주어서 fieldset button의 containing block을 fieldset으로 만든 것 */
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+}
+
+a {
+    text-decoration-line: none;
+}
+
+#mail {
+    background-image: url(./네이버\ 이미지\ 스프라이트.png);
+    background-size: 442px 428px;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-position: -420px -73px;
+    background-repeat: no-repeat;
+    vertical-align: top;
+}
+
