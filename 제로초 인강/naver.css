@@ -461,3 +461,72 @@ main {
     background: #555;
     float: left;
 }
+
+#main-category-top {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #ebeef3;
+}
+
+#subject-list, #subject-all, #subject-prev, #subject-next {
+    float: left;
+    height: 45px;
+}
+
+#subject-list {
+    width: 587px;
+}
+
+#subject-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#subject-list li {
+    float: left;
+}
+
+
+#subject-all, #subject-prev, #subject-next {
+    width: 45px;
+    background-color: white;
+    border: none;
+    border-left: 1px solid #ebeef3;
+    position: relative;
+}
+
+#subject-prev span:last-child {
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    width: 8px;
+    height: 16px;
+    background: url(./sp_themecast.png);
+    background-repeat: no-repeat;
+    background-position: -320px 0;
+
+}
+
+#subject-next span:last-child {
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    width: 8px;
+    height: 16px;
+    background: url(./sp_themecast.png);
+    background-repeat: no-repeat;
+    background-position: -320px -52px;
+}
+
+#subject-all span:last-child {
+    position: absolute;
+    top: 15px;
+    left: 12px;
+    width: 20px;
+    height: 14px;
+    background: url(./sp_themecast.png);
+    background-repeat: no-repeat;
+    background-position: -218px -257px;
+}
+
