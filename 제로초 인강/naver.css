@@ -119,6 +119,7 @@ nav ul {
 
 nav li {
     display: inline-block;
+    padding-left: 14px;
 }
 
 a {
@@ -134,5 +135,13 @@ a {
     background-position: -420px -73px;
     background-repeat: no-repeat;
     vertical-align: top;
+    padding-right: 25px;
 }
+
+/* 덮어씌우는 우선순위 */
+/* 뒤에 나오는 css가 우선순위가 높음
+    !important > inline > id > class > tag
+    의사클래스는 은메달
+    !important는 최후의 수단으로 사용하자(치트키라고 생각하자)
+     */
 
