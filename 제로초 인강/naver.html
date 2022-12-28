@@ -3,6 +3,7 @@
     2-1강, 2-2강, 2-3강
     3-1강, 3-2강, 3-3강, 3-4강
     4-1강, 4-2강, 4-3강, 4-4강, 4-5강
+    5-1강
   -->
 <!-- MDN web docs - 컨테이닝 블록의 모든 것 -->
 
@@ -19,7 +20,11 @@
     </head>
     <body>
         <header>
-            <div id="fixed">고정</div> <!-- fixed는 스크롤로 움직여도 같이다님, fixed의 containing block은 body임-->
+            <!-- <div id="fixed">고정</div> fixed는 스크롤로 움직여도 같이다님, fixed의 containing block은 body임 -->
+            <div style="background-color: green; overflow:hidden; height:140px;">
+                <div style="float:right; background-color: red; height: 200px;">둥둥둥둥</div>
+                <div style="overflow: auto;">가나다라마바사아자차카타파하</div> 
+            </div>
             <div class="center-align"> <!-- 가운데 정렬용 div-->
                 <!-- css문법 - 속성명 : 속성값 -->
                 <!-- css를 html파일 안에 : inline style <- 권장 x -->
