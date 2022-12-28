@@ -72,7 +72,8 @@ html, body {
     border-radius: 2px;
     display: inline-block;
     vertical-align: middle;
-    position: relative;
+    position: absolute;
+    top: 40px;
 }
 
 #header-search fieldset input {
@@ -145,3 +146,12 @@ a {
     !important는 최후의 수단으로 사용하자(치트키라고 생각하자)
      */
 
+#header-top {
+    float: right;
+}
+
+#header-top span {
+    font-size: 11px;
+    color: #404040;
+    line-height: 24px;
+}
