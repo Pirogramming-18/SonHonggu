@@ -56,6 +56,7 @@
     border-radius: 2px;
     display: inline-block;
     vertical-align: middle;
+    position: relative;
 }
 
 #header-search fieldset input {
@@ -73,9 +74,9 @@
     border: none;
     padding: 0;
     background: #19ce60;
-    position: relative;
-    right: -39px;
-    top: -14px;
+    position: absolute;
+    right: -2px;
+    top: -2px;
     /* block format context, stacking context */
 }
 
@@ -89,3 +90,7 @@
     background-repeat: no-repeat;
     vertical-align: top;
 }
+
+/* position absolute는 본인의 조상을 계속 타고 올라가다가 static이 아닌 block을 기준으로 움직인다
+그래서 기본 디폴트가 static이라서 html까지 올라가버릴 수도 있다
+이걸 방지하기 위해 fieldset을 relative로 바꿔주어서 fieldset button의 containing block을 fieldset으로 만든 것 */
