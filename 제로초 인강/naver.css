@@ -17,6 +17,14 @@ html, body {
     font-family: Dotum, '돋움', Helvetica, "Apple SD Gothic Neo", sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+img {
+    object-fit: cover;
+}
+
 .blind {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -246,6 +254,19 @@ main {
     float: left;
 }
 
+.inline-block {
+    display: inline-block;
+}
+
+#first {
+    width: 740px;
+}
+
+#second {
+    width: 332px;
+    vertical-align: top;
+}
+
 #main-ytn {
     display: inline-block;
     width: 740px;
@@ -255,6 +276,41 @@ main {
     margin-right: 8px;
 }
 
+#main-ytn h3, #main-ytn ol {
+    display: inline-block;
+}
+
+#main-newstand h3 {
+    height: 45px;
+    border-bottom: 1px solid #f1f3f6;
+}
+
+#main-newstand {
+    display: inline-block;
+}
+
+#main-newstand ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#main-newstand li {
+    float: left;
+    width: 123px;
+    height: 67px;
+    border-right: 1px solid #f1f3f6;
+    border-bottom: 1px solid #f1f3f6;
+    text-align: center; 
+    /* 가로 가운데 정렬 */
+}
+
+#main-newstand li img {
+    position: relative;
+    top: 50%; /* 맨 위끝 기준으로 반 내려오기 때문에 */
+    transform: translateY(-50%); /*자기 자신의 반절만큼 위로 올려준다는 의미*/
+}
+/* 세로 가운데 정렬 */
 #main-newstand {
     display: inline-block;
     width: 740px;
@@ -271,6 +327,7 @@ main {
     height: 142px;
     vertical-align: top;
     margin-bottom: 8px;
+    background: white;
 }
 
 #main-second-ad {
@@ -286,6 +343,9 @@ main {
     width: 740px;
     height: 837px;
     background: white;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    float: left;
 }
 
 #main-shopping {
@@ -293,6 +353,8 @@ main {
     width: 332px;
     height: 837px;
     background: white;
+    margin-bottom: 8px;
+    float: left;
 }
 
 #main-event {
@@ -301,6 +363,8 @@ main {
     height: 130px;
     vertical-align: top;
     background: white;
+    margin-right: 8px;
+    float: left;
 }
 
 #main-third-ad {
@@ -308,4 +372,5 @@ main {
     width: 332px;
     height: 130px;
     background: #555;
+    float: left;
 }
