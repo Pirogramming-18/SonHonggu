@@ -36,6 +36,8 @@
     /* background로 imgae, position, repeat 한 번에 조절 가능 */
     content: '';
     vertical-align: middle;
+    position: relative;
+    top: -7px;
 }
 
 #header-search a {
@@ -60,7 +62,9 @@
     border: none;
     padding: 0;
     outline: none;
-    height: 
+    width: 474px;
+    height: 33px;
+    vertical-align: top;
 }
 
 #header-search fieldset button {
@@ -69,6 +73,10 @@
     border: none;
     padding: 0;
     background: #19ce60;
+    position: relative;
+    right: -39px;
+    top: -14px;
+    /* block format context, stacking context */
 }
 
 #search-image {
