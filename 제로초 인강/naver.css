@@ -1,0 +1,11 @@
+/* 선택자(selector) */
+/* Cascading Style Sheet - 조상에 적용된 속성은 그대로 자손에게 전달된다(Cascading - 덮어쓰기) */
+/* id는 # class는 . */
+
+#header-center {
+    margin : 0 auto;
+    width: 1080px;
+}
+
+
+
