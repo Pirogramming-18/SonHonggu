@@ -6,7 +6,7 @@
     5-1강, 5-2강, 5-3강, 5-4강
     6-1강, 6-2강, 6-3강, 6-4강
     7-1강, 7-2강, 7-3강, 7-4강, 7-5강
-    8-1강, 8-2강, 
+    8-1강, 8-2강, 8-3강
   -->
 <!-- MDN web docs - 컨테이닝 블록의 모든 것 -->
 
@@ -17,7 +17,13 @@
             title : 홈페이지 탭에 뜨는 정보 -->
         <meta charset="utf-8" /> 
         <title>네이버</title>
+        <!-- <style>
+            *{
+                box-sizing: border-box;
+            }
+        </style> -->
         <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+        <link rel="stylesheet" href="./webfont.css">
         <link rel="stylesheet" href="./naver.css">
         <!-- ./는 현재 폴더를 의미한다고 생각하자 : 현재 폴더에 있는 facvicon.ico를 shortcut icon으로 하자 -->
     </head>
@@ -157,12 +163,12 @@
                 <div style="display: inline-block;width: 100%; vertical-align: top;">
                     <div id='first' class="inline-block">
                         <div id="main-ytn">
-                            <h3>뉴스</h3>
+                            <h3>연합뉴스</h3>
                             <ol>
                                 <li>소식)졸리다</li>
                             </ol>
                         </div>
-                        <div id="main-newstand">
+                        <section id="main-newstand">
                             <h3>뉴스스탠드</h3>
                             <ul>
                                 <li><img src="./매일경제.png" alt="매일경제"></li> <!--이미지태그: 소스태그 :이미지 가져오고/알트태그 : 시각장애인용 이미지 설명  -->
@@ -184,7 +190,7 @@
                                 <li><img src="./파이낸셜뉴스.png" alt="한국일보"></li>
                                 <li><img src="./파이낸셜뉴스.png" alt="한국일보"></li>
                             </ul>
-                        </div>
+                        </section>
                     </div>
                     <div id='second' class="inline-block">
                         <div id="main-weather"></div>
@@ -230,8 +236,7 @@
                     </div>
                     <div id="main-shopping">
                         <iframe src="https://castbox.shopping.naver.com/shoppingboxnew/main.nhn"
-                        scrolling="no"
-                        frameborder="0"></iframe>
+                        scrolling="no"></iframe>
                     </div>
                     
                 </div>
@@ -265,4 +270,8 @@
     <input type="checkbox"/>
     <input type="radio" name="group"/>
     <input type="radio" name="group"/>
+ -->
+
+ <!-- 괜찮은 시맨틱 태그 중에 section이 있다. 구역이 나뉘는 부분을 기준으로 하면 좋고,
+    보통 그 다음은 헤딩태그(h1~h6)이 나오기 때문에 blind처리 하면서 넣어주는게 좋다.
  -->
