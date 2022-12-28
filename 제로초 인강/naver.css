@@ -62,3 +62,22 @@
     outline: none;
     height: 
 }
+
+#header-search fieldset button {
+    width: 52px;
+    height: 52px;
+    border: none;
+    padding: 0;
+    background: #19ce60;
+}
+
+#search-image {
+    background-image: url(./네이버\ 이미지\ 스프라이트.png);
+    background-size: 442px 428px;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-position: -420px -24px;
+    background-repeat: no-repeat;
+    vertical-align: top;
+}
