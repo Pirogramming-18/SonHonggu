@@ -3,7 +3,7 @@
     2-1강, 2-2강, 2-3강
     3-1강, 3-2강, 3-3강, 3-4강
     4-1강, 4-2강, 4-3강, 4-4강, 4-5강
-    5-1강, 5-2강, 5-3강
+    5-1강, 5-2강, 5-3강, 5-4강
   -->
 <!-- MDN web docs - 컨테이닝 블록의 모든 것 -->
 
@@ -42,6 +42,8 @@
                     <fieldset>
                         <legend class="blind">검색</legend>
                         <input />
+                        <span class="search-keyboard"></span>
+                        <span class="search-history"></span>
                         <button>
                             <span class="blind">검색</span>
                             <span id="search-image"></span>
@@ -76,26 +78,30 @@
                     <li><a href=""><span></span><span>뮤직</span></a></li>
                     <li><a href=""><span></span><span>책</span></a></li>
                     <li><a href=""><span></span><span>웹툰</span></a></li>
+                </ul>
+                <ul>
+                    <div class="vertical-bar"></div>
+                </ul>
+                <ul>
                     <li><a href=""><span></span><span>더보기</span></a></li>
                 </ul>
-                <div class="vertical-bar"></div>
             </div>
         </nav>  
         <main>
             <h3 class="blind">로그인</h3>
-            <h3>뉴스</h3>
-            <ol>
+            <h3 class="center-align">뉴스</h3>
+            <ol class="center-align">
                 <li>소식)졸리다</li>
                 <li>소식)자고싶다</li>
                 <li>소식)집에갈래</li>
             </ol>
-            <h3>언론사 목록</h3>
-            <ul>
+            <h3 class="center-align">언론사 목록</h3>
+            <ul class="center-align">
                 <li><img src="./매일경제.png" alt="매일경제"></li> <!--이미지태그: 소스태그 :이미지 가져오고/알트태그 : 시각장애인용 이미지 설명  -->
                 <li><img src="./이코노미뉴스.png" alt="한국일보"></li>
             </ul>
-            <h3>법률</h3>
-            <h3>쇼핑</h3>
+            <h3 class="center-align">법률</h3>
+            <h3 class="center-align">쇼핑</h3>
         </main>
         <footer>
             <div>공지사항</div>

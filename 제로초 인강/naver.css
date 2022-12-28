@@ -81,7 +81,7 @@ html, body {
     border: none;
     padding: 0;
     outline: none;
-    width: 474px;
+    width: 463px;
     height: 33px;
     vertical-align: top;
 }
@@ -117,6 +117,7 @@ nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: inline-block;
 }
 
 nav li {
@@ -169,12 +170,12 @@ nav {
     padding-bottom: 54px;
 }
 
-.verticl-bar {
+.vertical-bar {
     display: inline-block;
-    margin: 18px 16px 0;
-    width: 10px;
-    height: 14px;
-    background-color: #ebeef3;
+    margin: 0 6px;
+    width: 1px;
+    height: 11px;
+    background-color: black;
 }
 
 #search-ranking {
@@ -190,4 +191,27 @@ nav {
     color: #00ab33;
     font-size: 16px;
     font-weight: bold;
+}
+
+.search-keyboard {
+    background-image: url(./네이버\ 이미지\ 스프라이트.png);
+    background-size: 442px 428px;
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+    background-position: -376px -267px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.search-history {
+    background-image: url(./네이버\ 이미지\ 스프라이트.png);
+    background-size: 442px 428px;
+    display: inline-block;
+    width: 10px;
+    height: 5px;
+    background-position: -158px -151px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
 }
