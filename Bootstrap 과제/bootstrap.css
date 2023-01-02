@@ -1,0 +1,82 @@
+h1,h2,h3,h4,h5,h6,p {
+    text-align: center;
+}
+
+.navbar__top {
+    position: sticky !important;
+    top: 0 !important;
+}
+
+p {
+    margin: 0 !important;
+}
+
+.btn-outline-success:hover {
+    background-color: transparent !important;
+}
+
+.modal-header {
+    justify-content: center !important;
+}
+
+.navmodal > .modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.modal-body > * {
+    text-align: center;
+}
+
+.navmodal > .modal-body > :nth-child(1) {
+    font-size: 2rem;
+}
+
+.navmodal > .navbar-toggler-icon {
+    border: transparent;
+}
+
+.footerbutton {
+    width: 100%;
+}
+
+.sendbutton {
+    width: 20%;
+}
+
+.message_box::placeholder{
+    position: absolute;
+    top: 1;
+    left: 1;
+}
+
+.message_box {
+    height: 20rem !important;
+}
+
+.border_under {
+    color: transparent;
+    border-top: 1px solid gray;
+    margin: 10px !important;
+}
+
+.icon {
+    font-size: 150px;
+    color: white;
+}
+
+.piro {
+    height: 80vh;
+    margin-top: 30vh;
+    margin-bottom: 20vh;
+}
+
+#intro {
+    height: 100vh;
+    padding-top: 30vh;
+    padding-bottom: 20vh;
+}
+
+.information_intro {
+    width: 40%;
+}

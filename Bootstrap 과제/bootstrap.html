@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./bootstrap.css">
+  <link rel="stylesheet" href="./reset.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/5658349e28.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar__top navbar navbar-expand-lg bg-dark">
+    <div class="container-fluid px-3">
+      <a class="navbar-brand text-white" href="#">Pirogramming</a>
+      <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon navbar-dark"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-primary" aria-current="page" href="#">SonHonggu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#intro">Intro</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary" href="#highlights">Highlights</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary" href="#gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary" href="#contact">Contact</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <button class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#aboutmodal">About</button>
+            
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="bg-white">
+    <div class="container piro">
+      <div class="row justify-content-center align-item-center">
+        <h1 class="col=12 d-flex justify-content-center text-center text-dark mt-5">Pirogramming 18</h1>
+        <p class="col=12 d-flex justify-content-center text-center text-dark mb-2">cheer up</p>
+        <p class="col=12 border_under mb-1">밑줄</p>
+        <div class="col=12 d-flex justify-content-center text-center">
+          <a class="sendbutton btn btn-primary mt-2 mb-5" type="button" href="#intro">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-secondary" id="intro">
+    <div class="container">
+      <div class="row">
+        <h1 class="col=12 mt-5 text-danger">Built On the Bootstrap Grid</h1>
+        <div class="col=12 d-flex justify-content-center text-center mt-4">
+          <p class="text-white information_intro">Bootstrap's responsive grid comes in 4sizes or 'breakpoints': tiny(xs), small(sm), medium(md) and large(lg). These 4 grid cites enables you creat responsive layouts that behave accordingly on different sizes</p>
+        </div>
+        <div class="col=12 d-flex justify-content-center text-center mt-4">
+          <a class="sendbutton btn btn-light mt-2 mb-5" type="button" href="#highlights">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-secondary" id="highlights">
+    <div class="container p-5">
+      <div class="row d-flex justify-content-center text-center p-1">
+        <h1 class="row d-flex justify-content-center text-center text-primary mt-5">Flexible Layouts</h1>
+        <p class="row border_under mb-5">밑줄</p>
+        <div class="col-12 col-sm-4 mb-5">
+          <i class="fa-solid fa-desktop icon mb-3"></i>
+          <h4 class="text-white mt-3">Responsive</h4>
+          <div class="text-white">Your site looks good everywhere</div>
+        </div>
+        <div class="col-12 col-sm-4 mb-5">
+          <i class="fa-regular fa-circle-check icon mb-3"></i>
+          <h4 class="text-white mt-3">Customizable</h4>
+          <div class="text-white">Your site looks good everywhere</div>
+        </div>
+        <div class="col-12 col-sm-4 mb-5">
+          <i class="fa-regular fa-star icon mb-3"></i>
+          <h4 class="text-white mt-3">Consistent</h4>
+          <div class="text-white">Your site looks good everywhere</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-secondary" id="gallery">
+    <div class="container p-3">
+      <div class="d-flex justify-content-center text-center mb-3 row row-cols-1 row-cols-sm-2 row-cols-md-3">
+        <div class="col pb-5">
+          <img src="https://picsum.photos/seed/picsum1/200/300" alt="">
+        </div>
+        <div class="col pb-5">
+          <img src="https://picsum.photos/seed/picsum2/200/300" alt="">
+        </div>
+        <div class="col pb-5">
+          <img src="https://picsum.photos/seed/picsum3/200/300" alt="">
+        </div>
+        <div class="col pb-5">
+          <img src="https://picsum.photos/seed/picsum4/200/300" alt="">
+        </div>
+        <div class="col pb-5">
+          <img src="https://picsum.photos/seed/picsum5/200/300" alt="">
+        </div>
+        <div class="col pb-5">
+          <img src="https://picsum.photos/seed/picsum6/200/300" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-secondary" id="contact">
+    <div class="container">
+      <div class="row contact">
+        <div class="container">
+          <h1 class="row d-flex justify-content-center text-center text-primary mt-5">Get in Touch</h1>
+          <p class="row border_under mb-5">밑줄</p>
+          <div class="row">
+            <input class="col-4 col-sm form-control my-2 mx-2" type="search" placeholder="name" aria-label="Search">
+            <input class="col-4 col-sm form-control my-2 mx-2" type="search" placeholder="email" aria-label="Search">
+            <input class="col-4 col-sm form-control my-2 mx-2" type="search" placeholder="phone" aria-label="Search">
+          </div>
+          <div class="row">
+            <input class="col message_box form-control my-2 mx-2" type="search" placeholder="Your messages here" aria-label="Search">
+          </div>
+          <div class="row">
+            <div class="col d-flex justify-content-center text-center">
+              <button class="sendbutton btn btn-primary mt-2 mb-5" type="button" data-bs-toggle="modal" data-bs-target="#sendmodal">Send</button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  
+  <footer class="bg-dark px-5 py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-4">
+          <div class="text-info">Information</div>
+          <div class="text-white">Product</div>
+          <div class="text-white">Services</div>
+          <div class="text-white mb-4">Benefits</div>
+        </div>
+        <div class="col-12 col-sm-4">
+          <div class="text-info">About</div>
+          <div class="text-white">Contact us</div>
+          <div class="text-white">Delivery Information</div>
+          <div class="text-white mb-4">Privacy Policy</div>
+        </div>
+        <div class="col-12 col-sm-4">
+          <div class="text-info">Stay Posted</div>
+          <input class="col form-control me-2 mt-2" type="search" placeholder="Tell me your email" aria-label="Search">
+          <button class="btn btn-primary my-2" type="button" data-bs-toggle="modal" data-bs-target="#footermodal">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<div class="modal fade" id="aboutmodal">
+  <div class="modal-dialog">
+      <div class="modal-content bg-secondary text-white">
+      <div class="modal-header navmodal">
+          <h5 class="modal-title">피로그래밍 18기</h5>
+      </div>
+      <div class="modal-body">
+          <div>파이팅!</div>
+          <div>모두들 아르샤 하느라 수고많으셨습니다!</div>
+          <div>힘들더라도 계속해서 달려봐요!</div>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-secondary text-primary" data-bs-dismiss="modal">Download</button>
+          <button type="button" class="btn btn-info" data-bs-dismiss="modal">Ok</button>
+      </div>
+      </div>
+  </div>
+</div>
+
+<div class="modal fade" id="sendmodal">
+  <div class="modal-dialog">
+      <div class="modal-content bg-white">
+        <div class="modal-header">
+          <h5 class="modal-title">Nice job!</h5>
+        </div>
+        <div class="modal-body">
+          <div>You clicked the button but it doesn't</div>
+          <div>actually go anywhere</div>
+          <div class="text-secondary my-3">Learn more at Bootstrap</div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="footerbutton btn btn-primary" data-bs-dismiss="modal">Ok</button>
+        </div>
+      </div>
+  </div>
+</div>
+  
+<div class="modal fade" id="footermodal">
+  <div class="modal-dialog">
+      <div class="modal-content bg-white">
+        <div class="modal-header">
+          <h5 class="modal-title">Nice job!</h5>
+        </div>
+        <div class="modal-body">
+          <div>You clicked the button but it doesn't</div>
+          <div>actually go anywhere</div>
+          <div class="text-secondary my-3">Learn more at Bootstrap</div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="footerbutton btn btn-primary" data-bs-dismiss="modal">Ok</button>
+        </div>
+      </div>
+  </div>
+  </div>
