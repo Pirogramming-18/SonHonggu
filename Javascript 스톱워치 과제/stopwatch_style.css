@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+
+html, button {
+    font-family: 'Nanum Brush Script', cursive;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-weight: 900;
+}
+
+ul {
+    list-style: none;
+    padding: 0 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.record_main {
+    width: 30vw;
+    overflow-y: scroll;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+i {
+    font-size: 2rem;
+}
+/* 
+label.checkbox:before {
+    content: "\f111";
+    font-family: "Font Awesome 5 Free";
+    font-size: 2rem;
+}
+
+input#check:checked + label.checkbox:before {
+    content: "\f058"
+}
+
+input#check {
+    display: none;
+} */
+
+.watch_container {
+    background-color: burlywood;
+    border-radius: 20px;
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 30px;
+    width: 50vw;
+}
+
+.watch_screen {
+    background-color: white;
+    border-radius: 20px;
+    padding: 50px 180px;
+    margin-bottom: 50px;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+
+.watch_button_container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn {
+    border-radius: 30px;
+    border-color: brown;
+    padding: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.record_header {
+    display: flex;
+    gap: 5rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: burlywood;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 20px 20px;
+}
+
+.record_topic {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.record_time, .record_screen {
+    display: flex;
+}
+
+.record_main, .record_screen {
+    display: flex;
+}
+
+.record_main {
+    flex-direction: column;
+}
+
+.record_screen {
+    font-size: 30px;
+    margin-left: 80px;
+}
+
+.all_clear {
+    cursor: pointer;
+}

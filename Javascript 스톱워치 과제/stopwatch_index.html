@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stopwatch with js</title>
+    <link rel="stylesheet" href="./stopwatch_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <i class="fa-solid fa-stopwatch"></i>
+        <h1>피로그래밍 스탑워치</h1>
+    </header>
+    <main>
+        <div class="watch_container">
+            <div class="watch_screen">
+                <div class="seconds">00</div>
+                <div>:</div>
+                <div class="milliseconds">00</div>
+            </div>
+            <div class="watch_button_container">
+                <button class="btn start">start</button>
+                <button class="btn stop">stop</button>
+                <button class="btn reset">reset</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="record_container">
+            <div class="record_header">
+                <input type="checkbox" id="check" class="allcheck">
+                <div class="record_topic">구간 기록</div>
+                <i class="fa-solid fa-trash all_clear"></i>
+            </div>
+            <ul class="record_main">
+                <!-- <li class="record_time">
+                    <input type="checkbox" id="check">
+                    <label for="check" class="checkbox"></label>
+                    <div class="record_screen">
+                        <div class="seconds">00</div>
+                        <div>:</div>
+                        <div class="milliseconds">00</div>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+    </footer>
+
+
+
+    <script src="https://kit.fontawesome.com/6fbcf91afd.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./stopwatch_main.js"></script>
+</body>
+</html>
