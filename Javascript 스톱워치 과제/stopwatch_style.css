@@ -26,7 +26,6 @@ li {
 
 .record_main {
     width: 30vw;
-    overflow-y: scroll;
 }
 
 header {
@@ -38,20 +37,6 @@ header {
 i {
     font-size: 2rem;
 }
-/* 
-label.checkbox:before {
-    content: "\f111";
-    font-family: "Font Awesome 5 Free";
-    font-size: 2rem;
-}
-
-input#check:checked + label.checkbox:before {
-    content: "\f058"
-}
-
-input#check {
-    display: none;
-} */
 
 .watch_container {
     background-color: burlywood;
@@ -106,6 +91,7 @@ input#check {
 
 .record_time, .record_screen {
     display: flex;
+    width: ;
 }
 
 .record_main, .record_screen {
@@ -123,4 +109,8 @@ input#check {
 
 .all_clear {
     cursor: pointer;
+}
+
+input[type=checkbox] {
+    transform: scale(2);
 }

@@ -9,6 +9,7 @@ const stopBtn = document.querySelector('.stop');
 const resetBtn = document.querySelector('.reset');
 const allClear = document.querySelector('.all_clear');
 const allCheck = document.querySelector('.allcheck');
+
 let intervalId;
 
 
@@ -17,15 +18,26 @@ function fillZero(num) {
 }
 
 allCheck.onclick = function(){
+    const subCheck = document.querySelectorAll('.subcheck');
     if (allCheck.checked){
-        console.log('체크x->o')
+        for (let i = 0; i < subCheck.length; i++){
+            subCheck[i].checked = true;
+        }
     } else {
-        console.log('체크o->x')
+        for (let i = 0; i < subCheck.length; i++){
+            subCheck[i].checked = false;
+        }
     }
+
 }
 
 allClear.onclick = function(){
-    recordBox.innerHTML = ``
+    const subCheck = document.querySelectorAll('.subcheck');
+    for (let j = 0; j < subCheck.length; j++){
+        if(subCheck[j].checked){
+            subCheck[j].parentElement.remove();
+        }
+    }
 }
 
 startBtn.onclick = function(){
@@ -39,14 +51,19 @@ stopBtn.onclick = function(){
     if (sec != 0 || millisec != 0) {
         recordBox.innerHTML += `
             <li class="record_time">
-                <input type="checkbox" id="subcheck">
-                <div class="record_screen">
+                <input type="checkbox" class="subcheck">
+                <div class="record_screen"> 
                     <div class="seconds">00</div>
                     <div>:</div>
                     <div class="milliseconds">00</div>
                 </div>
             </li>
         `;
+        let targetsecond = document.querySelector('.record_main').lastElementChild.querySelector('.seconds');
+        let targetmillisec = document.querySelector('.record_main').lastElementChild.querySelector('.milliseconds');
+        targetsecond.textContent = fillZero(sec)
+        targetmillisec.textContent = fillZero(millisec)
+
     }
 }
 
