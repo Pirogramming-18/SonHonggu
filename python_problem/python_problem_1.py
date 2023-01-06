@@ -28,8 +28,11 @@ idx = 0
 player_list = ['playerA', 'playerB']
 this_turn = player_list[idx]
 
-while num <= 31:
-    number_of_num()
-    if num == 31:
-        print(this_turn, 'win!')
-        break
+def brGame():
+    while num <= 31:
+        number_of_num()
+        if num == 31:
+            print(this_turn, 'win!')
+            break
+
+brGame()
