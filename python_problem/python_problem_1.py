@@ -17,6 +17,9 @@ def number_of_num():
     for i in range(x):
         num += 1
         print(this_turn, ':' ,num)
+        if num >= 31:
+            return
+
     idx = (idx+1)%len(player_list)
     this_turn = player_list[idx]
 
@@ -25,5 +28,7 @@ idx = 0
 player_list = ['playerA', 'playerB']
 this_turn = player_list[idx]
 
-number_of_num()
-number_of_num()
+while num <= 31:
+    number_of_num()
+    if num == 31:
+        break
