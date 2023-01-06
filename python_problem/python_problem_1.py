@@ -12,3 +12,7 @@ while flag:
             flag = False
         else:
             print('1,2,3 중 하나를 입력하세요')
+
+for i in range(x):
+    num += 1
+    print('playerA :',num)
