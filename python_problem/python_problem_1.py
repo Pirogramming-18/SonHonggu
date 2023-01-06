@@ -31,4 +31,5 @@ this_turn = player_list[idx]
 while num <= 31:
     number_of_num()
     if num == 31:
+        print(this_turn, 'win!')
         break
