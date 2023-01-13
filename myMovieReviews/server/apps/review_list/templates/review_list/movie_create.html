@@ -1,42 +1,60 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WRITE NEW REVIEW</title>
+    <link rel="stylesheet" href="{% static '/css/movie_create.css' %}">
 </head>
 <body>
-    <h1>🍿New Movie Review🍿</h1>
-
-    <form action="/movie/create" method="post">
-        {% csrf_token %}
-        <p>영화 제목 : </p>
-        <input name="title" />
-        <br />
-        <p>개봉년도 : </p>
-        <input name="release_year"/>
-        <br />
-        <p>장르 : </p>
-        <input name="genre"/>
-        <br />
-        <p>별점 : </p>
-        <input name="score" type="float" />
-        <br />
-        <p>러닝타임 : </p>
-        <input name="running_time" type="number" />
-        <br />
-        <div>리뷰 : </div>
-        <textarea name="content" cols="30" rows="10"></textarea>
-        <br />
-        <p>감독 : </p>
-        <input name="director" />
-        <br />
-        <p>배우 : </p>
-        <input name="main_actor" />
-        <div>
-            <input type="submit" value="SAVE" />
+    <header>
+        <div class="topic_container">
+            <a href="/"><h1>my</h1></a> 
+            <a href="/"><h1 class="pink">Movie</h1></a> 
+            <a href="/"><h1>reviews</h1></a> 
         </div>
-    </form>
+        <a href="/movie/create" class="add_review">Add a new review</a>
+    </header>
+    <main>
+        <hr />
+        <div class="main">
+            <h1>🍿New Movie Review🍿</h1>
+            <hr style="width: 600px;"/>
+            <form action="/movie/create" method="post">
+                {% csrf_token %}
+                <div class="info_main">
+                    <span>영화 제목 : </span>
+                    <input name="title" />
+                    <br />
+                    <span>개봉년도 : </span>
+                    <input name="release_year"/>
+                    <br />
+                        <span>장르 : </span>
+                        <input name="genre"/>
+                    <br />
+                    <span>별점 : </span>
+                    <input name="score" type="float" />
+                    <br />
+                    <span>러닝타임 : </span>
+                    <input name="running_time" type="number" />
+                    <br />
+                    <div>리뷰 : </div>
+                    <textarea name="content" cols="70" rows="10"></textarea>
+                    <br />
+                    <span>감독 : </span>
+                    <input name="director" />
+                    <br />
+                    <span>배우 : </span>
+                    <input name="main_actor" />
+                    <hr />
+                    <div class="save_btn">
+                        <input class="input_button" type="submit" value="SAVE" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
 </body>
 </html>

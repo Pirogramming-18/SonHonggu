@@ -1,41 +1,61 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DETAILS</title>
+    <link rel="stylesheet" href="{% static '/css/movie_read.css' %}">
 </head>
 <body>
-    <h1>
-        <a href="/">my Movie reviews</a>
-    </h1>
-    <h1>{{post.title}}</h1>
-    <small>개봉년도 : {{post.release_year}}년</small>
-    <br />
-    <small>감독 : {{post.director}}</small>
-    <br />
-    <small>주연 : {{post.main_actor}}</small>
-    <br />
-    <small>장르 : {{post.genre}}</small>
-    <br />
-    <small>별점 : {{post.score}}</small>
-    <br />
-    <small>러닝타임 : {{post.running_time}}분</small>
-    <br />
-    <p>{{post.content}}</p>
-    <br />
-    <!-- <br />
-    <small>작성일: {{post.created_at}}</small>
-    <br />
-    <small>수정일: {{post.updated_at}}</small> -->
-
-    <hr />
-    <a href="/">홈으로</a>
-    <a href="/movie/{{ post.id }}/update">수정하기</a>
-    <form action="/movie/{{ post.id }}/delete" method="post">
-    {% csrf_token %}
-    <input type="submit" value="삭제하기">
-</form>
+    <header>
+        <div class="topic_container">
+            <a href="/"><h1>my</h1></a> 
+            <a href="/"><h1 class="pink">Movie</h1></a> 
+            <a href="/"><h1>reviews</h1></a> 
+        </div>
+        <a href="/movie/create" class="add_review">Add a new review</a>
+    </header>
+    <main>
+        <hr />
+        <h1>{{post.title}}</h1>
+        <hr />
+        <div class="main_1">
+            <div class="movie_img">
+                <img src="https://picsum.photos/seed/picsum{{ post.id }}/200/250" alt="랜덤 이미지">
+            </div>
+            <div class="movie_info">
+                <small>개봉년도 : {{post.release_year}}년</small>
+                <br />
+                <small>감독 : {{post.director}}</small>
+                <br />
+                <small>주연 : {{post.main_actor}}</small>
+                <br />
+                <small>장르 : {{post.genre}}</small>
+                <br />
+                <small>별점 : {{post.score}}</small>
+                <br />
+                <small>러닝타임 : {{post.running_time}}분</small>
+            </div>
+        </div>
+        <div class="main_2">
+            <p>{{post.content}}</p>
+            <br />
+        </div>
+        <!-- <br />
+        <small>작성일: {{post.created_at}}</small>
+        <br />
+        <small>수정일: {{post.updated_at}}</small> -->
+    </main>
+    <footer>
+        <hr />
+        <a href="/" style="font-size: 13pt">홈으로</a>
+        <a href="/movie/{{ post.id }}/update" style="font-size: 13pt">수정하기</a>
+        <form action="/movie/{{ post.id }}/delete" method="post">
+            {% csrf_token %}
+            <input type="submit" class="input_button" value="삭제하기">
+        </form>
+    </footer>
 </body>
 </html>

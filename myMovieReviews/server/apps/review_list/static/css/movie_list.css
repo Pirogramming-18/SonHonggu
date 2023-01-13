@@ -1,0 +1,41 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 2rem;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: palevioletred;
+}
+
+.topic_container {
+    display: flex;
+    gap: .3rem;
+}
+
+.pink {
+    color: palevioletred;
+}
+
+ul {
+    padding: 0;
+    margin: 0 2rem;
+}
+
+.movie_container {
+    display: flex;
+    /* justify-content: center; */
+    gap: 2rem;
+}
+
+.movie_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
