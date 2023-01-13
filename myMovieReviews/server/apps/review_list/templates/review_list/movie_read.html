@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETAILS</title>
+</head>
+<body>
+    <h1>
+        <a href="/">my Movie reviews</a>
+    </h1>
+    <h1>{{post.title}}</h1>
+    <small>개봉년도 : {{post.release_year}}년</small>
+    <br />
+    <small>감독 : {{post.director}}</small>
+    <br />
+    <small>주연 : {{post.main_actor}}</small>
+    <br />
+    <small>장르 : {{post.genre}}</small>
+    <br />
+    <small>별점 : {{post.score}}</small>
+    <br />
+    <small>러닝타임 : {{post.running_time}}분</small>
+    <br />
+    <p>{{post.content}}</p>
+    <br />
+    <!-- <br />
+    <small>작성일: {{post.created_at}}</small>
+    <br />
+    <small>수정일: {{post.updated_at}}</small> -->
+
+    <hr />
+    <a href="/">홈으로</a>
+    <a href="/movie/{{ post.id }}/update">수정하기</a>
+    <form action="/movie/{{ post.id }}/delete" method="post">
+    {% csrf_token %}
+    <input type="submit" value="삭제하기">
+</form>
+</body>
+</html>

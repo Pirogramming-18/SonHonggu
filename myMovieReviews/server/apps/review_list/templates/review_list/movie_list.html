@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY MOVIE REVIEWS</title>
+</head>
+<body>
+    <header>
+        <h1>my Movie reviews</h1>
+        <a href="/movie/create">Add a new review</a>
+    </header>
+    <body>
+        <ul>
+            {% for post in posts %}
+            <h3><a href="/movie/{{ post.pk }}">{{ post.title }}</a></h3>
+            <small>개봉년도: {{ post.release_year }}년</small>
+            <br />
+            <small>장르: {{ post.genre }}</small>
+            <br />
+            <small>별점: {{ post.score }}</small>
+            <hr />
+            {% endfor %}
+        </ul>
+    </body>
+</body>
+</html>

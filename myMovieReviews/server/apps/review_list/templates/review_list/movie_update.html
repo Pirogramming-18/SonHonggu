@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODIFY</title>
+</head>
+<body>
+    <h1>🍿Modify Movie Review🍿</h1>
+    <form action="/movie/{{post.id}}/update" method="post">
+        {% csrf_token %}
+        <p>영화 제목 : </p>
+        <input name="title" value="{{ post.title }}" />
+        <br />
+        <p>개봉년도 : </p>
+        <input name="release_year" value="{{ post.release_year }}" />
+        <br />
+        <p>장르 : </p>
+        <input name="genre" value="{{ post.genre }}" />
+        <br />
+        <p>별점 : </p>
+        <input name="score" value="{{ post.score }}" type="float" />
+        <br />
+        <p>러닝타임 : </p>
+        <input name="running_time" value="{{ post.running_time }}" type="number" />
+        <br />
+        <div>리뷰 : </div>
+        <textarea name="content" cols="30" rows="10">{{ post.content }}</textarea>
+        <br />
+        <p>감독 : </p>
+        <input name="director" value="{{ post.director }}" />
+        <br />
+        <p>배우 : </p>
+        <input name="main_actor" value="{{ post.main_actor }}" />
+        <div>
+            <input type="submit" value="SAVE" />
+        </div>
+    </form>
+</body>
+</html>
