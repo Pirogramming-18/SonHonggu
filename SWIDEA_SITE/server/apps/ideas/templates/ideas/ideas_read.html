@@ -31,6 +31,11 @@
             <p>아이디어 관심도 : {{ idea.interest }}</p>
             <p>예상 개발 툴 : <a href="{% url 'ideas:devtool_read' idea.devtool.id %}">{{ idea.devtool.name }}</a></p>
             <p>아이디어 설명 : {{ idea.content }}</p>
+            {% if idea.star %}
+                <p>찜 여부 : O</p>
+            {% else %}
+                <p>찜 여부 : X</p>
+            {% endif %}
         </div>
         <div>
             <a href="{% url 'ideas:list' %}">목록으로</a>

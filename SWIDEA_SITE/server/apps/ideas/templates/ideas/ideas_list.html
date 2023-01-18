@@ -64,7 +64,7 @@
                 <h3><a href="{% url 'ideas:read' idea.pk %}">{{ idea.title }}</a></h3>
                 <small>예상 개발 툴 : {{ idea.devtool.name }}</small>
                 <br />
-                <small>아이디어 관심도 : {{ idea.interest }}</small>
+                <small>아이디어 관심도 : <button name="plus">+</button>  <span class="interest">{{ idea.interest }}</span>  <button name="minus">-</button></small>
                 <br />
             </article>
             {% endfor %}
@@ -77,5 +77,22 @@
             });
         });
     </script>
+    <!-- <script type="text/javascript">
+        $('button[name=plus]').on('click', function(e) {
+            data = $('.interest').val();
+
+            $.ajax({
+                type:'POST',
+                url:'http://127.0.0.1:8000/',
+                data:JSON.stringify(data),
+                success:function(json){
+                    console.log("data pass success",json);
+                },
+                error : function(xhr,errmsg,err) {
+                console.log(xhr.status + ": " + xhr.responseText); 
+                }
+           });
+          });
+    </script> -->
 </body>
 </html>

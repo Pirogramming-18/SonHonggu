@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from server.apps.ideas.models import Idea, Devtool
+from django.views.decorators.csrf import csrf_exempt
 
+@csrf_exempt
 def ideas_list(request, *args, **kwargs):
     search_mode = request.GET.get('search_mode')
     context = {
