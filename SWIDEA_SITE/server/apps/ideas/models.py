@@ -6,6 +6,9 @@ class Devtool(models.Model):
     kind = models.CharField(max_length=64, blank=True)
     content = models.CharField(max_length=64, blank=True)
         
+# class Like(models.Model):
+#     liked = models.BooleanField(default=False)
+    
 class Idea(models.Model):
     title = models.CharField(max_length=64)
     image = models.ImageField(blank=True, upload_to='ideas/%Y%m%d', null=True)
@@ -14,6 +17,6 @@ class Idea(models.Model):
     devtool = models.ForeignKey(Devtool, on_delete=models.CASCADE, related_name="idea_devtool")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    star = models.BooleanField(default=False)
     
-# class Ideastar(models.Model):
     

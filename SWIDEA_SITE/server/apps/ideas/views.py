@@ -6,13 +6,28 @@ def ideas_list(request, *args, **kwargs):
     context = {
         'option_list' : ['기본', '찜하기순', '이름순', '등록순', '최신순']
     }
+    
+    if request.method == 'POST':
+        like_id = request.POST.get('like')
+        like_idea = Idea.objects.get(id=like_id)
+        trueorfalse = request.POST.get('trueorfalse')
+        print(like_idea.star, trueorfalse)
+        if trueorfalse == 'True':
+            like_idea.star = True
+            like_idea.save()
+            return redirect("/")
+        else:
+            like_idea.star = False
+            like_idea.save()
+            return redirect("/")
+            
     if search_mode:
         if search_mode == '기본':
             ideas = Idea.objects.all()
             default_option = '기본'
-        # elif search_mode == '찜하기순':
-        #     ideas = Idea.objects.order_by('title')
-        #     default_option = '찜하기순'
+        elif search_mode == '찜하기순':
+            ideas = Idea.objects.filter(star=True)
+            default_option = '찜하기순'
         elif search_mode == '이름순':
             ideas = Idea.objects.order_by('title')
             default_option = '이름순'

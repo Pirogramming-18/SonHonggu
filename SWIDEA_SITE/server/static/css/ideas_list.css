@@ -44,8 +44,8 @@ a:hover {
     color: white;
 }
 
-.checkbox {
-    position: relative;
-    right: 25px;
-    bottom: 184px;
+.main_posts {
+    display: flex;
+    gap: 2rem;
+    overflow: scroll;
 }

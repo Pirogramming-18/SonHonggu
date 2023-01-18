@@ -42,10 +42,25 @@
                     <img src="{{ idea.image.url }}" alt="">
                 </p>
                 {% endif %}
-                <form action="{% url 'ideas:list' %}" method="get" id="idea_star">
-                    {% csrf_token %}
-                    <input type="checkbox" id="checkbox" name="checkbox">
-                </form>
+
+                {% if not idea.star %}
+                    <form action="{% url 'ideas:list' %}" method="post" class="like">
+                        {% csrf_token %}
+                        <input type="submit" class="like" value="찜하기">
+                        <span>현재 상태 : 찜X</span>
+                        <input type="hidden" name="trueorfalse" value="True">
+                        <input type="hidden" name="like" value="{{idea.id}}">
+                    </form>
+                {% else %}
+                    <form action="{% url 'ideas:list' %}" method="post" class="like">
+                        {% csrf_token %}
+                        <input type="submit" class="like" value="찜취소">
+                        <span>현재 상태 : 찜</span>
+                        <input type="hidden" name="trueorfalse" value="False">
+                        <input type="hidden" name="like" value="{{idea.id}}">
+                    </form>
+                {% endif %}
+
                 <h3><a href="{% url 'ideas:read' idea.pk %}">{{ idea.title }}</a></h3>
                 <small>예상 개발 툴 : {{ idea.devtool.name }}</small>
                 <br />
@@ -62,14 +77,5 @@
             });
         });
     </script>
-    <!-- <script type="text/javascript">
-        $(document).on("click", "input[name='checkbox']", function(e){
-            $("#checkbox").submit();
-            var checked = $("#checkbox").is(":checked")
-            if(checked){
-
-            }
-            });
-    </script> -->
 </body>
 </html>
