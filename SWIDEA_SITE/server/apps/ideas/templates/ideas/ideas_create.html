@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDEA REGISTER</title>
+    <link rel="stylesheet" href="{% static 'css/ideas_create.css' %}">
+</head>
+<body>
+    <nav class="nav_bar">
+        <div class="nav_topic">Honggu's <span style="color:greenyellow">SW IDEA </span>CLOUD</div>
+        <div class="nav_tap">
+            <a href="{% url 'ideas:create' %}">아이디어 등록</a>
+            <a href="{% url 'ideas:list' %}">아이디어 관리</a>
+            <a href="{% url 'ideas:devtool_create' %}">개발툴 등록</a>
+            <a href="{% url 'ideas:devtool_list' %}">개발툴 관리</a>
+        </div> 
+    </nav>
+    <hr />
+
+    <div class="main_container">
+        <h2 class="main_topic">Idea Register</h2>
+        <h3 class="main_info">아이디어 등록 페이지! 생각날 때마다 업데이트 합시다</h3>
+        <div class="main_posts">
+            <hr />
+            <form action="{% url 'ideas:create' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <p>아이디어 명 :</p>
+                <input name="title" />
+                <br />
+                <p>이미지 등록 :</p>
+                <input type="file" name="image" />
+                <br />
+                <p>아이디어 설명 :</p>
+                <textarea name="content"></textarea>
+                <br />
+                <p>아이디어 관심도 :</p>
+                <input name="interest" />
+                <br />
+                <p>예상 개발툴 :</p>
+                <select name="devtool" id="devtool">
+                    <option value="" selected>-------</option>
+                    {% for devtool in devtools %}
+                    <option value="{{ devtool.id }}" name="devtool">{{ devtool.name }}</option>
+                    {% endfor %}
+                </select>
+                <br />
+                <div>
+                    <input type="submit", value="저장하기" />
+                </div>
+            </form>
+            <hr />
+        </div>
+    </div>
+</body>
+</html>

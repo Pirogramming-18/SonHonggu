@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEVTOOL DETAIL</title>
+    <link rel="stylesheet" href="{% static 'css/devtools_read.css' %}">
+</head>
+<body>
+    <nav class="nav_bar">
+        <div class="nav_topic">Honggu's <span style="color:greenyellow">SW IDEA </span>CLOUD</div>
+        <div class="nav_tap">
+            <a href="{% url 'ideas:create' %}">아이디어 등록</a>
+            <a href="{% url 'ideas:list' %}">아이디어 관리</a>
+            <a href="{% url 'ideas:devtool_create' %}">개발툴 등록</a>
+            <a href="{% url 'ideas:devtool_list' %}">개발툴 관리</a>
+        </div> 
+    </nav>
+    <hr />
+
+    <div class="main_container">
+        <div class="main_topic">Devtool Detail</div>
+        <div class="main_info">개발툴 세부페이지! 다음에 봐도 기억나게 상세히 수정해두자</div>
+        <div class="main_post">
+            <h1>{{ devtool.name }}</h1>
+            <p>{{ devtool.kind }}</p>
+            <p>{{ devtool.content }}</p>
+            <hr />
+            <p>>만들 수 있는 SW 목록</p>
+            {% for each_idea in all_ideas %}
+                <a href="{% url 'ideas:read' each_idea.id %}">{{ each_idea.title }}</a>
+            {% endfor %}
+        </div>
+        <div>
+            <a href="{% url 'ideas:devtool_list' %}">목록으로</a>
+        </div>
+        <div>
+            <a href="{% url 'ideas:devtool_update' devtool.pk %}">수정하기</a>
+        </div>
+        <form action="{% url 'ideas:devtool_delete' devtool.pk %}" method="post">
+            {% csrf_token %}
+            <input type="submit" , value="삭제하기" />
+        </form>
+    </div>
+</body>
+</html>

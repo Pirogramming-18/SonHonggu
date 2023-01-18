@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDEA LIST</title>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/ideas_list.css' %}?after ">
+</head>
+<body>
+    <nav class="nav_bar">
+        <div class="nav_topic">Honggu's <span style="color:greenyellow">SW IDEA </span>CLOUD</div>
+        <div class="nav_tap">
+            <a href="{% url 'ideas:create' %}">아이디어 등록</a>
+            <a href="{% url 'ideas:list' %}">아이디어 관리</a>
+            <a href="{% url 'ideas:devtool_create' %}">개발툴 등록</a>
+            <a href="{% url 'ideas:devtool_list' %}">개발툴 관리</a>
+        </div> 
+    </nav>
+    <hr />
+
+    <div class="main_container">
+        <div class="main_topic">Idea List</div>
+        <div class="main_info">나의 아이디어를 잊지말고 기록해두자</div>
+        <form action="{% url 'ideas:list' %}" method="get" id="search_mode">
+            <select name="search_mode" id="search_mode">
+                <option value="">{{ default_option }}</option>
+                {% for option in option_list %}
+                {% if option != default_option %}
+                    <option value={{ option }}>{{ option }}</option>
+                {% endif %}
+                {% endfor %}
+            </select>
+        </form>
+        <div class="main_posts">
+            {% for idea in ideas %}
+            <article>
+                {% if idea.image %}
+                <p class="checkbox_container">
+                    <img src="{{ idea.image.url }}" alt="">
+                </p>
+                {% endif %}
+                <form action="{% url 'ideas:list' %}" method="get" id="idea_star">
+                    {% csrf_token %}
+                    <input type="checkbox" id="checkbox" name="checkbox">
+                </form>
+                <h3><a href="{% url 'ideas:read' idea.pk %}">{{ idea.title }}</a></h3>
+                <small>예상 개발 툴 : {{ idea.devtool.name }}</small>
+                <br />
+                <small>아이디어 관심도 : {{ idea.interest }}</small>
+                <br />
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("select[name=search_mode]").change(function () {
+            $("#search_mode").submit();
+            });
+        });
+    </script>
+    <!-- <script type="text/javascript">
+        $(document).on("click", "input[name='checkbox']", function(e){
+            $("#checkbox").submit();
+            var checked = $("#checkbox").is(":checked")
+            if(checked){
+
+            }
+            });
+    </script> -->
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDEA MODIFY</title>
+    <link rel="stylesheet" href="{% static 'css/ideas_update.css' %}">
+</head>
+<body>
+    <nav class="nav_bar">
+        <div class="nav_topic">Honggu's <span style="color:greenyellow">SW IDEA </span>CLOUD</div>
+        <div class="nav_tap">
+            <a href="{% url 'ideas:create' %}">아이디어 등록</a>
+            <a href="{% url 'ideas:list' %}">아이디어 관리</a>
+            <a href="{% url 'ideas:devtool_create' %}">개발툴 등록</a>
+            <a href="{% url 'ideas:devtool_list' %}">개발툴 관리</a>
+        </div> 
+    </nav>
+    <hr />
+
+    <div class="main_container">
+        <h2 class="main_topic">Idea Modify</h2>
+        <h3 class="main_info">아이디어 수정 페이지! 변경사항이 생기면 바로 바로 업데이트 합시다</h3>
+        <div class="main_posts">
+            <hr />
+            <form action="{% url 'ideas:update' idea.pk %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <p>아이디어 명 :</p>
+                <input name="title" value="{{ idea.title }}" />
+                <br />
+                <p>이미지 등록 :</p>
+                {% if idea.image %}
+                    <p>
+                        현재 이미지 : {{ idea.image.url }}
+                        <small style="color:white">삭제하기</small>
+                        <input type="checkbox" name="check" />
+                    </p>
+                    <input type="file" name="image" />
+                {% else %}
+                    <input type="file" name="image" />
+                {% endif %}
+                <br />
+                <p>아이디어 설명 :</p>
+                <textarea name="content">{{ idea.content }}</textarea>
+                <br />
+                <p>아이디어 관심도 :</p>
+                <input name="interest" value="{{ idea.interest }}" />
+                <br />
+                <p>예상 개발툴 :</p>
+                <select name="devtool" id="devtool">
+                    <option value="" selected>{{ idea.devtool.name }}</option>
+                    {% for devtool in devtools %}
+                    {% if devtool.name != idea.devtool.name %}
+                    <option value="{{ devtool.id }}" name="devtool">{{ devtool.name }}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+                <br />
+                <div>
+                    <input type="submit", value="저장하기" />
+                </div>
+            </form>
+            <hr />
+        </div>
+    </div>
+</body>
+</html>

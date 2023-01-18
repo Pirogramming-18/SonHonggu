@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEVTOOL LIST</title>
+    <link rel="stylesheet" href="{% static 'css/devtools_list.css' %}">
+</head>
+<body>
+    <nav class="nav_bar">
+        <div class="nav_topic">Honggu's <span style="color:greenyellow">SW IDEA </span>CLOUD</div>
+        <div class="nav_tap">
+            <a href="{% url 'ideas:create' %}">아이디어 등록</a>
+            <a href="{% url 'ideas:list' %}">아이디어 관리</a>
+            <a href="{% url 'ideas:devtool_create' %}">개발툴 등록</a>
+            <a href="{% url 'ideas:devtool_list' %}">개발툴 관리</a>
+        </div> 
+    </nav>
+    <hr />
+
+    <div class="main_container">
+        <h2 class="main_topic">Devtool List</h2>
+        <h3 class="main_info">내가 사용할 수 있는 개발툴 목록! 계속 늘려나갑시다</h3>
+        <div class="main_posts">
+            <hr />
+            {% for devtool in devtools %}
+            <article class="main_post">
+                <span><a href="{% url 'ideas:devtool_read' devtool.pk %}">{{ devtool.name }}</a></span>
+                <span>{{ devtool.kind }}</span>
+                <span>{{ devtool.content }}</span>
+            </article>
+            <hr />
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

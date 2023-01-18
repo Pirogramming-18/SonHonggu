@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDEA DETAIL</title>
+    <link rel="stylesheet" href="{% static 'css/ideas_read.css' %}">
+</head>
+<body>
+    <nav class="nav_bar">
+        <div class="nav_topic">Honggu's <span style="color:greenyellow">SW IDEA </span>CLOUD</div>
+        <div class="nav_tap">
+            <a href="{% url 'ideas:create' %}">아이디어 등록</a>
+            <a href="{% url 'ideas:list' %}">아이디어 관리</a>
+            <a href="{% url 'ideas:devtool_create' %}">개발툴 등록</a>
+            <a href="{% url 'ideas:devtool_list' %}">개발툴 관리</a>
+        </div> 
+    </nav>
+    <hr />
+
+    <div class="main_container">
+        <div class="main_topic">Idea Detail</div>
+        <div class="main_info">아이디어 기록 세부페이지! 다음에 봐도 기억나게 상세히 수정해두자</div>
+        <div class="main_post">
+            {% if idea.image %}
+                <p><img src="{{ idea.image.url }}" alt=""></p>
+            {% endif %}
+            <h1>{{ idea.title }}</h1>
+            <p>아이디어 관심도 : {{ idea.interest }}</p>
+            <p>예상 개발 툴 : <a href="{% url 'ideas:devtool_read' idea.devtool.id %}">{{ idea.devtool.name }}</a></p>
+            <p>아이디어 설명 : {{ idea.content }}</p>
+        </div>
+        <div>
+            <a href="{% url 'ideas:list' %}">목록으로</a>
+        </div>
+        <div>
+            <a href="{% url 'ideas:update' idea.pk %}">수정하기</a>
+        </div>
+        <form action="{% url 'ideas:delete' idea.pk %}" method="post">
+            {% csrf_token %}
+            <input type="submit" , value="삭제하기" />
+        </form>
+    </div>
+</body>
+</html>
